@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Smart Button Demo</title>
-  <meta name="description" content="Demo app for smart-button" />
+  <title>fxos-tv-dialog Demo</title>
+  <meta name="description" content="Demo app for fxos-tv-dialog" />
   <style type="text/css">
     html,
     body {
@@ -38,12 +38,12 @@
 </head>
 <body role="application">
   <button onclick="openDialog()">Open</button>
-  <smart-dialog id="my-dialog" title="Youtube">
+  <fxos-tv-dialog id="my-dialog" title="Youtube">
     <div class="content">
-        Smart dialog opened.
+        fxos-tv dialog opened.
     </div>
     <button onclick="closeDialog()">Close</button>
-  </smart-dialog>
+  </fxos-tv-dialog>
   <script>
     var dialog = document.getElementById('my-dialog');
     window.onload = function() {

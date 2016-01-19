@@ -1,7 +1,7 @@
 {
-  "name": "smart-dialog",
+  "name": "fxos-tv-dialog",
   "version": "0.0.0",
-  "homepage": "https://github.com/smart-components/smart-dialog",
+  "homepage": "https://github.com/fxos-components/fxos-tv-dialog",
   "main": "script.js",
   "license": "MPL",
   "ignore": [
