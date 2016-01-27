@@ -1,5 +1,5 @@
 /**
- * Smart-Dialog
+ * fxos-tv-dialog
  *   - State:
  *       1. closed
  *       2. opening
@@ -8,7 +8,7 @@
  * Default scale: 1920x1080 (2*sqrt(960*960 + 1080*1080) / 20 = 144.5)
  */
 
-smart-dialog {
+fxos-tv-dialog {
   position: fixed;
   z-index: 2147483647;
   top: 0;
@@ -17,7 +17,7 @@ smart-dialog {
   height: 100%;
 }
 
-smart-dialog:before {
+fxos-tv-dialog:before {
   content: attr(title);
   display: block;
   margin-top: 5rem;
@@ -28,7 +28,7 @@ smart-dialog:before {
   color: #ffffff;
 }
 
-smart-dialog:after {
+fxos-tv-dialog:after {
   content: "";
   display: block;
   position: fixed;
@@ -41,37 +41,37 @@ smart-dialog:after {
   transform: scale(20);
 }
 
-smart-dialog.closed > *,
-smart-dialog.closing > *,
-smart-dialog.opening > *,
-smart-dialog.closed:before,
-smart-dialog.closing:before,
-smart-dialog.opening:before {
+fxos-tv-dialog.closed > *,
+fxos-tv-dialog.closing > *,
+fxos-tv-dialog.opening > *,
+fxos-tv-dialog.closed:before,
+fxos-tv-dialog.closing:before,
+fxos-tv-dialog.opening:before {
   display: none;
 }
 
-smart-dialog.closed {
+fxos-tv-dialog.closed {
   visibility: hidden;
 }
 
-smart-dialog.opened {
+fxos-tv-dialog.opened {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-smart-dialog.opened:after {
+fxos-tv-dialog.opened:after {
   visibility: hidden;
   border-radius: 50%;
   transform: scale(144.5);
 }
 
-smart-dialog.opening:after {
+fxos-tv-dialog.opening:after {
   border-radius: 50%;
   transform: scale(144.5);
   /* transitionDuration should be the same as openDuration variable in script */
   transition: transform 1s cubic-bezier(0, 0, 0 ,1);
 }
 
-smart-dialog.closing:after {
+fxos-tv-dialog.closing:after {
   border-radius: 50%;
   transform: scale(20);
   /* transitionDuration should be the same as closeDuration variable in script */
@@ -80,24 +80,24 @@ smart-dialog.closing:after {
 
 /* 1280x800 for flatfish */
 @media (width: 1280px) and (height: 800px) {
-  smart-dialog:after,
-  smart-dialog.closing:after {
+  fxos-tv-dialog:after,
+  fxos-tv-dialog.closing:after {
     transform: scale(7.5);
   }
 
-  smart-dialog.opening:after {
+  fxos-tv-dialog.opening:after {
     transform: scale(102.5);
   }
 }
 
 /* 800x1280 for flatfish vertical */
 @media (width: 800px) and (height: 1280px) {
-  smart-dialog:after,
-  smart-dialog.closing:after {
+  fxos-tv-dialog:after,
+  fxos-tv-dialog.closing:after {
     transform: scale(8.3);
   }
 
-  smart-dialog.opening:after {
+  fxos-tv-dialog.opening:after {
     transform: scale(134);
   }
 }

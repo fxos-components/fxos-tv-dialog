@@ -1,20 +1,20 @@
 /**
- * Smart-Dialog
+ * fxos-tv-dialog
  *   - Event:
  *       1. will-open
  *       2. opened
  *       3. will-close
  *       4. closed
  *   - API:
- *       1. open - open a smart-dialog: closed -> opening -> opened
- *       2. close - close a smart-dialog: opened -> closing -> closed
+ *       1. open - open a fxos-tv-dialog: closed -> opening -> opened
+ *       2. close - close a fxos-tv-dialog: opened -> closing -> closed
  *   - Attribute:
- *       1. title - title of the smart-dialog
+ *       1. title - title of the fxos-tv-dialog
  *       2. esc-close - close dialog when ESC key is clicked (default true).
  * Default scale: 1920x1080 (2*sqrt(960*960 + 1080*1080) / 20 = 144.5)
  */
 
-window.SmartDialog = (function(win) {
+window.FxosTvDialog = (function(win) {
   'use strict';
 
   // The value of openDuration and closeDuration should be the same as
@@ -116,5 +116,5 @@ window.SmartDialog = (function(win) {
   };
 
   // Register and return the constructor
-  return document.registerElement('smart-dialog', { prototype: proto });
+  return document.registerElement('fxos-tv-dialog', { prototype: proto });
 })(window);
